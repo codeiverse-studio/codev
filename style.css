@@ -1,0 +1,484 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #f12711, #f5af19);
+    color: #fdfff4;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px); /* smooth blur bak teksten */
+    -webkit-backdrop-filter: blur(10px); /* Safari-støtte */
+    background: linear-gradient(to right, #f1271161, #f5af1962);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    color: #fdfff4;
+    position: sticky; /* eller fixed */
+    top: 0;
+    z-index: 999;
+}
+
+  
+  nav a {
+    text-decoration: none;
+    color: #fdfff4;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 0.25;
+    flex-shrink: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  header a {
+    text-decoration: none;
+    color: #fdfff4;
+  }
+  
+  
+  .hero-image {
+    position: relative;
+    width: 100%;
+    max-width: 2500px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;; /* lar deg klikke gjennom lag */
+  }
+  
+  .hero-text {
+    text-align: center;
+    pointer-events: auto; /* lar knappen være klikkbar */
+  }
+  
+  header .logo {
+    color: #ff8345;
+    font-size: 0.8rem;
+  }
+  
+  .section-2 {
+    background-color: #fbd1a2;
+    color: #1a1a1a;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  
+  .section-2 h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: #fdfff4;
+  }
+  
+  .offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .offer {
+    max-width: 300px;
+  }
+  
+  .offer h3 {
+    font-size: 1.8rem;
+    color: #1b0b7a;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid #1b1b1b;
+    padding-bottom: 0.3rem; /* valgfritt, gir luft under linjen */
+  }
+  
+  
+  .offer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #1a1a1a17;
+    padding-bottom: 0.1rem; /* valgfritt, gir luft under linjen */
+ 
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: #1b0b7a;
+  }
+  
+  .sub-label {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #1b0b7a;
+  }
+  
+  .section-3 {
+    background: linear-gradient(to bottom, #fbd1a2, #1b0b7a);
+    color: #fdfff4;
+    text-align: center;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .section-3 span {
+    font-size: clamp(1rem, 5vw, 4rem);
+    font-weight: 900;
+    display: inline-block;
+  }
+  
+  .section-3 .big {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+  }
+  
+  .section-3 .blue {
+    color: #1b0b7a;
+  }
+  
+  .section-3 .purple {
+    color: #5c32ec;
+  }
+  
+  .section-3 .orange {
+    color: #c45900;
+  }
+  
+  .section-3 .teal {
+    color: #00b4b4;
+  }
+  
+  .section-4 {
+    background: #1b0b7a;
+    color: #fdfff4;
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .section-4 h2 {
+    font-size: 4rem;
+    margin: 0;
+  }
+  
+  .section-4 p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 1.5rem auto;
+  }
+  
+  .cta-button-to {
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    background: linear-gradient(#1b0b7a, #1b0b7a) padding-box,
+                linear-gradient(to right, #f5af19, #f12711) border-box;
+    color: #fdfff4;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.8rem;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    background: linear-gradient(#ff646423, #fff20053) padding-box,
+                linear-gradient(to right, #f5af19, #f12711) border-box;
+    color: #fdfff4;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+  
+
+  .cta-button-to:hover {
+    transform: scale(1.05);
+  }
+
+  .corner-img {
+    position: absolute;
+    bottom: 0rem;
+    left: 0.5rem;
+    width: 90px; /* eller 200px om du vil */
+    z-index: 1;
+    opacity: 0.8; /* valgfritt for subtil stil */
+  }
+
+  #eytron-help:hover {
+    background-color: #00ddcc;
+  }
+  
+  #eytron-help {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff7700;
+    color: #000;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 0 12px #ff00007c;
+    z-index: 10000;
+    cursor: pointer;
+  }
+  
+  #eytron-chat-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: #005864ee;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(1, 175, 181, 0.3);
+    padding: 16px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    z-index: 10001;
+  }
+  
+  #eytron-chat-popup.hidden {
+    display: none;
+  }
+  
+  .chat-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #00fffb;
+  }
+  
+  .chat-body {
+    font-size: 0.9rem;
+  }
+  
+  .chat-body textarea {
+    width: 100%;
+    height: 60px;
+    background: #002a38f4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    margin-top: 8px;
+  }
+  
+  .chat-body button {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #00eaff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #close-chat {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  #chat-log {
+    max-height: 180px;
+    overflow-y: auto;
+    margin-top: 12px;
+    padding-right: 4px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  #chat-log p {
+    margin: 6px 0;
+  }
+  
+  footer {
+    color: #ccc;
+    font-size: 0.8rem;
+    padding: 2rem;
+    background: #201a2e;
+  }
+  
+  .footer-about h3,
+  .footer-links h3,
+  .footer-socials h3 {
+    color: #eaeaea;
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 20px;
+    justify-content: left;
+  }
+  
+  
+  
+  
+  .footer-socials {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  
+  .footer-socials a {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .footer-socials a:hover {
+    color: #fff;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: #424242;
+  }
+  
+  .minnet {
+    font-size: 0.7rem;
+    color: #424242;
+  }
+
+
+
+
+/* HAMBURGER KNAPP */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fdfff4;
+  cursor: pointer;
+}
+
+/* Når menyen er åpen på mobil */
+#main-nav.open {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #ff2600c7;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+
+  
+@media (min-width: 600px) {
+
+    .cta-button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        pointer-events: none;; /* lar deg klikke gjennom lag */
+      }
+
+    
+      .footer-socials a {
+        margin: 0 0.5rem;
+      }
+    }
+
+
+
+  

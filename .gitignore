@@ -1,0 +1,8 @@
+# Lokale dev-filer
+.env
+*.log
+.DS_Store
+Thumbs.db
+
+# npm/Node-moduler hvis du bruker det senere
+node_modules/
