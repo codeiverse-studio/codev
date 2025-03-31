@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="learnspace_ui_style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <title>LearnSpace – Quiz</title>
+</head>
+<body>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+
+<nav class="side-menu" id="sideMenu">
+  <div class="menu-header">Meny</div>
+  <ul>
+    <li><a href="index.html">Hjem</a></li>
+    <li><a href="corebase.html">Corebase</a></li>
+    <li><a href="knowzone.html">KnowZone</a></li>
+    <li class="menu-section">Språk</li>
+  </ul>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+
+  <!-- Optional Hamburger (can be activated later) -->
+  <header class="simple-header">
+    <img src="bilder/learnspace.png" alt="knowzone logo">
+  </header>
+
+  <main class="container">
+    <h1>Velg et tema å utforske</h1>
+    <section class="card-grid">
+      <div class="ui-card html">
+        <div class="icon"><i class="fa-brands fa-html5"></i></div>
+        <h3>HTML</h3>
+        <p>Lær struktur og semantikk for å bygge grunnmuren i alle nettsider.</p>
+        <button>Start Quiz</button>
+      </div>
+      <div class="ui-card css">
+        <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
+        <h3>CSS</h3>
+        <p>Utforsk layout, farger, animasjon og styling av web.</p>
+        <button>Start Quiz</button>
+      </div>
+      <div class="ui-card java">
+        <div class="icon"><i class="fa-brands fa-java"></i></div>
+        <h3>Java</h3>
+        <p>Test deg på objektorientert programmering og logisk flyt.</p>
+        <button>Start Quiz</button>
+      </div>
+      <div class="ui-card python">
+        <div class="icon"><i class="fa-brands fa-python"></i></div>
+        <h3>Python</h3>
+        <p>Perfekt for nybegynnere – lær alt fra variabler til AI.</p>
+        <button>Start Quiz</button>
+      </div>
+      <div class="ui-card sql">
+        <div class="icon"><i class="fa-solid fa-database"></i></div>
+        <h3>SQL</h3>
+        <p>Forstå hvordan du henter, filtrerer og manipulerer data.</p>
+        <button>Start Quiz</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Om Codeiverse</h3>
+        <p>Her handler det ikke bare om hva koden gjør, men hvorfor.
+
+          KnowZone er din dypdykk-seksjon: artikler, eksempler og forklaringer – med Eytron på laget når du står fast.
+          
+          Jo mer du forstår, jo smartere koder du.</p>
+        <p class="student">Av student, for studenter.</p>
+      </div>
+  
+      <div class="footer-links">
+        <h3>Nyttige lenker</h3>
+        <ul>
+          <li><a href="codeiverse.html">Hjem</a></li>
+          <li><a href="corebase.html">CoreBase</a></li>
+          <li><a href="eytron.html">Eytron</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="brukervilkaar.html"></a>Brukervilkår</li>
+          <li><a href="personvern.html">Personvernerklæring</li>
+        </ul>
+      </div>
+  
+      <div class="footer-socials">
+        <h3>Følg oss</h3>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy;2025 Codeiverse. Laget med ♥ i Norge.</p>
+    </div>
+  </footer>
+  
+
+</div>
+</div>
+</body>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const sideMenu = document.getElementById('sideMenu');
+  const overlay = document.getElementById('overlay');
+
+  hamburger.addEventListener('click', () => {
+    sideMenu.classList.add('open');
+    overlay.classList.add('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    sideMenu.classList.remove('open');
+    overlay.classList.remove('active');
+  });
+</script>
+</html>
